@@ -1,6 +1,6 @@
-### Hello everyone 👋 This is Osteino
+### Hello everyone, I'm Osteino,
 
-- 🔭 I’m currently working on Shopify Projects
-- 🌱 I’m currently learning JavaScript
+- 🔭 Currently working on Shopify Projects
+- 🌱 I use HTML CSS and JavaScript for most of my work 
 - 💬 Ask me about Shopify Store setup
 - 📫 How to reach me: 
