@@ -1,6 +1,6 @@
 ### Hi Everyone,
 
-- 🔭 Welcome to my page on GitHub. I am Ofotsu.
+- 🔭 Welcome to my GitHub page. I am Ofotsu.
 - 🔭 I work on projects in web development, shopify development and data analysis.
 - 🔭 I currently build and customize websites and online stores.
 - 🌱 I use a variety of programs including python and JavaScript for my projects.
