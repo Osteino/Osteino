@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title> Osteino</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Shadows+Into+Light&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/pPK749sccDmVW_9DSeTMVvh2/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-BJuEtmqk8gvp2kvOiXzxtaoRQQS7QjSOSAczV0tKC29lpbOt/RFR43n1iVnzO4Em"></script>
+    <script  type="text/javascript"  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/rdIG4w2E3IbgjAku06L87y0ZFXz7GUDE63jdAru1p6ZfJCY4qnvD6K1NeWravFQ7ODuiiMuTzpO_gw2G7FTS4Q=="></script>
+    <script  type="text/javascript"  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/KgM9RRKGV3HL5ag09SjmgNt1qWOdTqRTo_pJE0NVYfNIqfkcPnFlPTBktLmkkrz5RmbNy6Klf8CqUfaWmaVynw=="></script>
+    <script  type="text/javascript"  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/QmLhXL-etUYkjHCJNelxuaRR7UAuifc3MzEOGz3Vu6EbzBMb_zB7_C1qh7NgHjx3z6WXzlwEZTF80ujiRR46fQ=="></script>
+    <script  type="text/javascript"  src="https://productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com/Sl55r_PwLIPU_z20GNkLHpwQBsHj2IgFsviz3T-wy0AGyE2WQyUDaljLNklCsFo2Stgh5sU16tut9-cjc4D7Uw=="></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNJN1PF3CS"></script>
+    <script type='text/javascript' src='script/config.js'></script>
+    
+    <script>
+      const ganalyticnum = config.G_ANALYTIC_NUM
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'ganalyticnum');
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        
+        (function() {
+          const mypublickey = config.MY_PUBLIC_KEY
+            emailjs.init({
+              publicKey: mypublickey
+            });
+        })();
+    
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+               
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });   
+            });
+        }
+      const mysitekey = config.MY_SITE_KEY
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : mysitekey
+        });
+      };
+    </script>
+
+    <style>
+      body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; font-weight: 800;}
+      h2 {font-size: clamp(2.6rem,7vw,4rem); margin-left: 1.5rem;}
+      h2, .hero {font-family: "arial black"; text-align: left;  }
+      .ant { font-family: 'Antonio'; font-size: 160%; font-weight: 700; }
+      .w3-row-padding img {margin-bottom: 0.9rem;}
+      /* Set the width of the sidebar to 120px */
+      .w3-sidebar {width: 120px;background: #222;}
+      /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+      #main, footer {margin-left: 120px}
+      /* Remove margins from "page content" on small screens */
+      .o4-r02 {border-radius: 0.2rem;}
+      .o4-op-08 {opacity: 0.8;}
+      .o4-bg-bk {background-color: rgba(0,0,0,0.9);}
+      .o4-bgy {display: inline; padding: 0.2rem 1rem;margin-block: 2rem; background-color: #add8e6;color: black;}
+  
+      marquee span {
+        font-size: 91%;
+        margin-inline: 2rem;
+        background: linear-gradient(360deg, rgba(215,136,215,1), rgba(11, 3, 8, 1));
+      }
+      .img-bx {
+        padding: 3px;
+        margin: 1.4rem;
+        border-radius: 0.2rem;
+        overflow: hidden;
+      }
+
+      .img-bx.conic {
+        animation: img-co 3s linear infinite;
+        background: conic-gradient(rgba(171, 136, 171, 1) 0deg 90deg, transparent 90deg 180deg, #add8e6 180deg 270deg, transparent 270deg 360deg);
+      }
+
+      @keyframes img-co {
+        0% {
+            background: conic-gradient(rgba(171, 136, 171, 1) 0deg 90deg, transparent 90deg 180deg, #add8e6 180deg 270deg, transparent 270deg 360deg);
+        }
+        50% {
+            background: conic-gradient(transparent 0deg 90deg, #add8e6 90deg 180deg, transparent 180deg 270deg, rgba(171, 136, 171, 1) 270deg 360deg);
+        }
+        100% {
+            background: conic-gradient(#add8e6 0deg 90deg, transparent 90deg 180deg, rgba(171, 136, 171, 1) 180deg 270deg, transparent 270deg 360deg);
+        }
+      }
+
+      .img-bx>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.2rem;
+      }
+      
+      .hero:after {
+        position: absolute;
+        content: "";
+        width: 1%;
+        height: 100%;
+        left: 0%;
+        top: 0%;
+        background-color: transparent;
+        opacity: 0.1;
+        animation: move-right 8s linear infinite;
+        /*animation-play-state: paused;*/
+      }
+
+      .hero:hover:after {
+        /*animation-play-state: running;*/
+      }
+      
+      @keyframes move-right {
+        0% {
+          left: 0%;
+        }
+        100% {
+          left: 100%;background-color: white;
+        }
+      }
+      
+      .hero>span:before {
+        position: absolute;
+        content: "";
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        transform: skew(-7deg) translate(-3rem, -1.5rem);
+        border: 3px solid white;
+        background-color: #add8e6;
+        opacity: 0.8;
+        border-radius: 0.9rem;
+      }
+
+      .hero>span:after {
+        position: absolute;
+        content: "";
+        left: 5%;
+        top: 7%;
+        width: 90%;
+        height: 5%;
+        opacity: 0;
+        background-color: red;
+        border-radius: 0.9rem;
+        animation: scan 2s ease-in-out 3s infinite forwards;
+        animation-play-state: paused;
+      }
+
+      .hero>span:hover:after {
+        animation-play-state: running;
+      }
+
+
+      @keyframes scan {
+        0% {
+          top: 0%; opacity: 0.1;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+
+      .hero>span:hover:before {
+        transition: all 2s ease-in-out;
+        opacity: 0.4;
+        transform: skew(0deg) translate(0rem, 0rem);
+      }
+
+      .hero ul li {
+        padding: 0.3rem;
+        letter-spacing: 3px;
+        font-family: "Shadows Into Light";
+        text-shadow: 3px 3px 2px black;
+        font-size: clamp(1.1rem, 3.2vw, 2.3rem);
+        scale: 1.4;
+        cursor: pointer;
+        tansition: all 0.5s ease;
+      }
+
+        .hero ul li:hover {
+          color: white;
+          text-shadow: 3px 3px 2px purple;
+        }
+
+      .qts {
+        max-with: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .qts-bx {
+        width: 87%;
+        max-width: 668px;
+        height: 240px;
+        padding: 1rem 0.2rem;
+        margin: auto;
+        justify-self: center;
+        border-inline: 2px solid grey;
+        border-radius: 0.5rem;
+        background-image: url(image/img05.png);
+        background-size: cover;
+        position: relative;
+        transform: skew(-6deg);
+        box-shadow: 5px 5px 20px 2px rgba(0,0,0, 0.7);
+      }
+
+      .qts-bx:before, .qts-bx:after {
+        position: absolute;
+        content: '';
+        width: 103%;
+        height: 11%;
+        border-radius: 5px;
+        background-image: linear-gradient(0deg, rgb(119,99,99), white, rgb(119, 99, 99));
+        top: 0;
+        left: -1.5%;
+      }
+
+      .qts-bx:after {
+        top: 89%;
+        transform: skew(5deg);
+      }
+
+      .qts-bx blockquote {
+        padding: 0;
+        margin: 0;
+        font-family: 'Shadows into Light';
+        font-size: 140%;
+      }
+
+      .qts blockquote span {
+        background-image: linear-gradient(180deg, transparent 40%, rgba(172,172,59) 40% 70%, transparent 70%);
+        margin: 0;
+        padding: 0;
+      }
+
+      .qts-bx>span {
+        display: block;
+        opacity: 0.6;
+        margin-top: 0.7rem;
+      }
+
+      .qts-bx>p:has(cite) {
+        font-family: 'Great Vibes';
+        letter-spacing: 2px;
+        padding: 0;
+        font-size: 65%;
+        opacity: 0.8;
+      }
+
+      .qts-bx>p>cite {
+        opacity: 0.7;
+      }
+      
+      .slide {
+         display: none;
+      }
+
+      .slide.active {
+         display: block;
+      }
+
+      .appt-cal {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .subs-cnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding : 2rem;
+      }
+
+      .svice, .abt, .cnt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-tems: center;
+      }
+      
+      .abt>div, .cnt>:is(img, form, .appt-cal) {
+        width: min(95%, 280px);
+        flex-grow: 1;
+        margin: 1.4rem;
+      }
+
+      .skl {
+        margin-top: 5rem;
+      }
+
+      .skl>div {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 7%;
+        padding-inline: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .skl-bx {
+        display: grid;
+        place-items: center;
+        width: min(100%, 340px);
+        opacity: 0.8;
+        overflow: hidden;
+      }
+
+      .skl-bx>img {
+        width: 100%;
+        aspect-ratio: 5/3;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+
+      .skl-bx p {
+        font-size: clamp(0.6rem, 2vw, 0.9rem);
+        width: 97%; 
+        margin: auto;
+        padding: 0.4rem;
+      }
+      
+      .skl-bx:hover img {
+        transition: all 0.5s ease;
+        transform: scale(1.05);
+        filter: grayscale(0.8);
+      }
+ 
+      .skl-bx>p:last-child {
+        letter-spacing: 3px;
+        width: 100%; 
+        border-top: 8px solid lightblue;
+        cursor: pointer;
+      }
+
+      .cnt img {
+        border: 4px groove rgba(171, 136, 171, 1);
+      }
+
+      .ss-bx {
+        width: min(95%, 320px);
+        flex-grow: 1;
+        border: 1px solid rgba(171,171,83,0.2);
+        transition: all 0.5s ease-in;
+        list-style-type:none;
+        margin: 1rem;
+        padding: 0 0 1rem 0;
+      }
+
+      .ss-bx:hover {
+        scale: 1.05;
+        border-color: rgb(215, 136, 215); 
+      }
+
+      .ss-bx li {
+        padding: 0.4rem;
+        margin: 0;
+      }
+
+      .svice ul a {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        border: 1px dashed;
+        padding: 0.4rem 1.2rem;
+        transition: all 0.5s ease;
+      }
+
+      .svice ul li:nth-child(1)  {
+        display: flex;
+        align-items: center;
+        background: radial-gradient(farthest-side at 0% 87%, rgb(215, 136, 215), transparent);
+      }
+
+      .svice>ul>li>span:nth-child(1) {
+        font-size: 2.5rem;
+      }
+
+      .svice>ul>li>span:nth-child(2) {
+        width: 100%;
+        justify-self: center;
+      }
+
+      form {
+        max-width: 720px;
+        padding: 2rem;
+      }
+
+      input {
+        height: 1rem;
+        outline-color: black;
+      }
+    
+      textarea {
+        outline-color: black;
+      }
+
+      button[type='submit'], a[type='button'] {
+        letter-spacing: 2px;
+        display: block;
+        width: min(100%,321px);
+        margin: 2rem auto;
+        border-radius: 0.2rem;
+        box-shadow: inset 0 0 10px white;
+        background: linear-gradient(40deg, lightblue, rgba(215,136,215,0.7));
+        transition: all 0.5s ease;
+      }
+
+      :is(button[type='submit'], a[type='button']):hover {
+        background: linear-gradient(80deg, white, rgba(215,136,215,0.8));
+        color: white;
+      }
+
+      /*-------------Article-------------*/
+     
+
+
+      @media only screen and (max-width: 600px) {
+
+        #main, footer {
+          margin-left: 0;
+          
+        } 
+      }
+    </style>
+
+  </head>
+
+  <body class="o4-bg-bk">
+    
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-text-light-grey">
+      <!-- Avatar image in top left corner -->
+
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ABOUT</p>
+      </a>
+      <a href="#work" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-briefcase w3-xxlarge"></i>
+        <p>SOLUTIONS</p>
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+      </a>
+      <a href="#blog" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-rss w3-xxlarge"></i>
+        <p>BLOG</p>
+      </a>
+    </nav>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-xxlarge w3-hover-none w3-hide-large w3-hide-medium w3-text-light-grey" onclick="openNav()">&#9778;</a>
+    </div>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div id="mySidenav" class="w3-sidenav w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-large" onclick="closeNav()">&times;</a>
+      <a href="#" class="w3-bar-item w3-button">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#work" class="w3-bar-item w3-button">SOLUTIONS</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+      <a href="#blog" class="w3-bar-item w3-button">BLOG</a>
+    </div>
+        
+    <!-- Page Content -->
+    <div class="" id="main">
+
+      <!-- Hero Content -->
+      <div class="hero " style="position: relative;width: 100%;height: 90vh;
+          background-image: url(image/img01.png);background-size: cover;box-shadow: inset 0 0 26px 4px rgba(250, 254, 253, 0.3), inset 0 25px 0px rgba(1, 1, 1, 0.2);">
+          <marquee direction="left" behavior="left" scrollamount="2" class="w3-text-light-grey">
+            <span>Launch your startup today with a stunning website!</span>  <span>Contact now to get an <i>ONLINE STORE</i> tailored for your <i>BUSINESS </i></span> <span>Ask for <i>BONUS</i> and <i>FREE</i> consultation </span>
+          </marquee>
+          <span class="o4-blue" style="position: absolute; width: min(40%, 250px); aspect-ratio: 1/2; max-height: 70%; top: 55%; right: 25%; transform: translate(50%, -50%) skew(-6deg); background-image: url('image/img04.png'); border-radius: 1.1rem;
+        border: 3px ridge white; box-shadow: 7px 7px 1px 1px gray; z-index: 1; opacity: 0.9; cursor: pointer;"></span>
+          <ul class="o4-blue" style="position: absolute; top: 50%; left: 10%; transform: translate(-10%, -50%); list-style-type: none;">
+            <li>Ecommerce</li>
+            <li>Analyst</li>                      
+            <li>Consultant</li>
+            <li>Business</li>
+            <li>Entrepreneur</li>
+            <li>Solutions</li>
+          </ul>  
+      </div>
+      
+          
+          
+      <!-- End Hero Content -->
+
+      <!-- About Section -->
+      <div class="w3-content w3-text-light-grey w3-padding-64" id="about">
+        <h2 class="w3-text-light-grey">TECH ENTHUSIAST</h2>
+        <hr style="height: 6px; box-shadow: inset 0 0 5px white; background: linear-gradient(40deg, lightblue, purple);">
+        <div class="abt o4-op-08" >
+          <div>
+            <h3 class="o4-bgy ant">Greetings Everyone!</h3>
+            <p class="o4-op-08 ">I am a freelance web developer with a specialization in front-end development. Proficient in multiple programming languages. Excellent at creating dynamic, user-friendly websites. Experience spans projects from small business websites to large e-commerce platforms. Exploring new technologies and sharing knowledge is a passion of interest. Currently available for freelance projects. Send me <a href="mailto:brysck@workmail.com"><strong> an email here</strong> to get in touch.</a> For more information, business and any other concerns contact me here.</p>
+            <a class="w3-button w3-light-grey w3-padding-large abt-btn ant" href="#contact" type="button" style=" ">
+              <i class="fa fa-arrow-down"></i>
+              CONTACT NOW
+            </a>
+          </div>
+          <div class="img-bx conic"><img src="image/img02.png" alt="robot palm pointing to the galaxy"></div>
+        </div>
+
+        <div class=" skl">
+          <h5 class="ant w3-xlarge w3-center">DOMAIN OF INTEREST</h5>
+          <p class='w3-padding-16 o4-op-08'>Passionate about expanding knowledge and fostering innovation through analysis, research, and creative problem-solving to drive impactful results.</p>
+          <div class="w3-center">
+              <div class='skl-bx bg-bx'>
+                  <img src="image/img06.png" alt='DNA sequence' loading="lazy">
+                  <p>Collect, analyse, and interpret data to uncover patterns and trends to advance knowledge in various fields.</p>
+                  <p class="w3-white w3-text-black">RESEARCH</p>
+              </div>
+              <div class='skl-bx bg-bx'>
+                  <img src="image/img07.png" alt='security lock'loading="lazy">
+                  <p>Monitor, detect and respond to security incidents to protect an organization's information systems and data.</p>
+                  <p class="w3-white w3-text-black">SECURITY </p>
+              </div>
+            </div>
+            <div class="w3-center">
+                <div class='skl-bx bg-bx'>
+                  <img src="image/img11.png" alt='desktop computer, keyboard and mouse' loading="lazy">
+                  <p>Create interactive aspects of website and maintain website with HTML, CSS , JavaScript, JavaScript libaries including bootstrap and AI tools</p>
+                  <p class="w3-white w3-text-black">DEVELOPER </p>
+                </div>
+                <div class='skl-bx bg-bx'>
+                  <img src="image/img09.png" alt='background with zeros and ones' loading="lazy">
+                  <p>Extract insights from structured and unstructured data, enabling data-driven decisions that enhance business strategies and outcomes.</p>
+                  <p class="w3-white w3-text-black">DATA</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- End About Section -->
+    
+    
+      <!-- Service Section -->
+      <div class="w3-content w3-justify w3-text-light-grey w3-padding-64" id="work">
+        <h2 class="w3-text-light-grey">SERVICE AND SOLUTIONS</h2>
+        <hr style="height: 6px; box-shadow: inset 0 0 5px white; background: linear-gradient(40deg, lightblue, purple);">
+        <div class="w3-row-padding svice">
+          
+            <ul class="ss-bx bg-bx w3-center">
+              <li class="ant w3-opacity">
+                <span>01</span>
+                <span>Build Online Stores</span>
+              </li>
+              <li class=" w3-opacity"><p>E-commerce startups, Set up Online Store, Build Online Store, Customize Themes, Social Media Intergrations </p></li>
+              <li class="w3-opacity w3-hover-opacity-off o4-blue"><a href="#contact">Get more information </a></li>
+            </ul>
+        
+          
+            <ul class="ss-bx bg-bx w3-center">
+              <li class="ant w3-opacity">
+                <span>02</span>
+                <span>Get Personal and Business Websites</span>
+              </li>
+              <li class="w3-opacity"><p>Build Websites, Customize Websites, Mobile Responsive, Landing Pages, Search Engine Optimization</p></li>
+              <li class="w3-opacity w3-hover-opacity-off o4-blue"><a href="#contact">Get more information</a></li>
+            </ul>
+          
+            <ul class="ss-bx bg-bx w3-center">
+              <li class="w3-opacity ant">
+                <span>03</span>
+                <span>Consult from Experts in the Field</span>
+              </li>
+              <li class="w3-opacity"><p>Affiliate Marketing, Brand and Products, Search Engine Optimization, Online Store Management, Google Analytics</p></li>
+              <li class="w3-opacity w3-hover-opacity-off o4-blue"><a href="#contact">Get more information</a></li>
+            </ul>
+          
+            <ul class="ss-bx bg-bx w3-center">
+              <li class="w3-opacity ant">
+                <span>04</span>
+                <span>Online Security and Information</span>
+              </li>
+              <li class=" w3-opacity"><p>Implement best security practices for business websites, Get updates on products and services, A/B Testing, Trends in technology</p></li>
+              <li class="w3-opacity w3-hover-opacity-off o4-blue"><a href="#contact">Get more information </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <!-- End Service Section -->
+      
+      <!-- Contact Section -->
+      <div class="w3-padding-64 w3-content w3-text-light-grey" id="contact">
+        <h2 class="w3-text-light-grey">CONTACT INFORMATION</h2>
+        <hr style="height: 6px; box-shadow: inset 0 0 5px white; background: linear-gradient(40deg, lightblue, purple);">
+        <p class="ant o4-op-08 w3-center">Got a question? I would like to hear from you. Comments and suggestions are welcome.</p>
+        <div class="cnt">
+          <form id="contact-form" method="POST" target="blank" class="cnt-form bg-bx">
+            <h3 class=" w3-center ant">GET IN TOUCH</h3>
+            <input type="hidden" name="contact_number" value="697483">
+            <p><input class="w3-input w3-padding-16 w3-black" type="text" placeholder="Name" required="" name="user_name"></p>
+            <p><input class="w3-input w3-padding-16 w3-black" type="email" placeholder="Email" required="" name="user_email"></p>
+            <p><input class="w3-input w3-padding-16 w3-black" type="phone" placeholder="Phone number" name="phone_number"></p>
+            <p><input class="w3-input w3-padding-16 w3-black" type="text" placeholder="Subject" required="" name="subject"></p>
+            <p><textarea class="w3-input w3-padding-16 w3-black" type="text" placeholder="Message" required="" name="message"></textarea></p>
+            <div id="html_element"><div style="width: 100%; height: 78px; margin: auto;"><div><p style="color: grey;background: black; padding: 0.5rem 0 0 0.5rem;margin: 0;">Verification</p><iframe title="reCAPTCHA" width="100%" height="78" role="presentation" name="a-p4eh82679rl5" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Le8R44qAAAAAGMaoPxBlvr2nECK_YmsrKHwQHnS&amp;co=aHR0cHM6Ly9vc3RlaW5vLmNvbTo0NDM.&amp;hl=en&amp;v=pPK749sccDmVW_9DSeTMVvh2&amp;size=normal&amp;cb=2lgl03kl3g4f"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 100%; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+            <br>
+            <button class="w3-button w3-light-grey w3-padding-large ant" type="submit" >
+              <i class="fa fa-paper-plane"></i> SEND NOW
+            </button>
+          </form>
+          <img src="image/img13.png" alt="hand writing on a paper " loading="lazy">
+        </div> 
+        <br>
+        <br>
+        <br> 
+        <br>
+        <div class=''>
+          <p class="ant o4-op-08 w3-center">Make an inquiry today. Feel free to reach out. I would like to hear from you.</p>
+          <div class='cnt'>
+            <img src='image/img17.png' alt='hand pointing to phone' loading='lazy'>   
+            <div class="bg-bx appt-cal">
+              <h2 class="ant o4-bgy">BOOK AN APPOINTMENT</h2>
+              <p class="w3-opacity" style="max-width: 560px;">Project and Collaboration?. Make an appointment today. Get a 30 minutes zoom call to talk about new and ongoing projects.</p>
+              <a class="w3-button w3-light-grey w3-padding-large appt-btn ant" href="" type="button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/brysck'});return false;">
+                  <i class="fa fa-arrow-right"></i>
+                  SCHEDULE NOW
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Contact Section -->
+      
+
+      <!-- Blog Section -->
+      <div class="w3-padding-64 w3-content w3-text-light-grey" id="blog">
+        <h2 class="">BLOG</h2>
+        <hr style="height: 6px; box-shadow: inset 0 0 5px white; background: linear-gradient(40deg, #add8e6, rgba(171, 136, 171, 1));">
+        <div class=" w3-padding-32 blg" style="border-bottom: 1px solid rgba(171, 171, 83, 0.5);">
+          <div style="border-bottom: 1px solid rgba(171, 171, 83, 0.5);">
+            <div class="" style="display: flex; align-items: center; justify-content: space-between; margin-right: 1rem;">
+              <h5>THE LATEST NEWS IN TECH </h5>
+              <span class=" ">&#8285</span>
+            </div>
+            <p class="w3-opacity ">Get in the know! News updates, newsletters, trending posts and articles in technology, science, artificial intelligence, ecommerce and more.</p>
+          </div>
+          
+          <div class="article bg-bx w3-opacity w3-hover-opacity-off">
+              <img src="image/img12.png" alt="Article 1" loading="lazy">
+              <div>
+                <h4>Empowering the future with data, technology and innovation</h4>
+                <p>News: Osteino Hub</p>
+              </div>
+          </div>
+          <div class="article bg-bx w3-opacity w3-hover-opacity-off">
+              <img src="image/img10.png" alt="Article 2" loading="lazy">
+              <div>
+                <h4>Top 10 Must-Have AI Tools to Supercharge Your Business</h4>
+                <p>News: Osteino Hub</p>
+              </div>
+          </div>
+          <div class="article bg-bx w3-opacity w3-hover-opacity-off">
+              <img src="image/img14.png" alt="Article 3" loading="lazy">
+              <div>
+                <h4>The future of Smart Cities. How IoT is Revolutionizing Urban Living</h4>
+                <p>News: Osteino Hub</p>
+              </div>
+          </div>
+          <div class="article bg-bx w3-opacity w3-hover-opacity-off">
+              <img src="image/img16.png" alt="Article 3" loading="lazy" style=" ">
+              <div>
+                <h4>Securing the Future of Work with Innovative Strategies to Protect Data in a Hybrid Remote Environment</h4>
+                <p>News: Osteino Hub</p>
+              </div>
+          </div>
+          <a href="blog.html" class="w3-opacity w3-hover-opacity-off o4-blue">GET MORE IN BLOG POST &#8594 </a>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="subs-cnt">
+        <form id="subscription-form" method="POST" target="blank" class="subs-form bg-bx w3-center">
+          <h3 class="ant o4-bgy">NEWSLETTERS</h3>
+          <h4 class="w3-padding-16 w3-opacity" style="max-width: 510px;">Signup for the latest news in ecommerce, AI, trending technology and updates</h4>
+          <input type="hidden" name="contact_number" value="697484">
+          <input class="w3-input w3-padding-16 w3-black" type="email" placeholder="Email" required="" name="Email">
+          <button class="w3-button w3-light-grey w3-padding-large ant" type="submit">
+            <i class="fa fa-envelope"></i> 
+            SUBSCRIBE
+          </button>
+        </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <div class="w3-padding-64 qts slideshow bg-bx w3-center ">
+            <div class='qts-bx slide'>
+              <span>&#8220</span>
+                <blockquote cite="https://www.goodreads.com/work/quotes/824680-a-framework-for-web-science-foundations-and-trends-r-in-web-science">
+                  <span>Data is a precious thing and will last longer than the systems themselves.</span>
+                </blockquote>
+                <p>— Tim Berners-Lee, <cite>( A Framework for Web Science )</cite></p>
+            </div>
+              <div class='qts-bx slide'>
+                <span>&#8220</span>
+                <blockquote cite="https://www.salon.com/2014/03/11/neil_degrasse_tyson_science_is_true_whether_or_not_you_believe_in_it/">
+                  <span>The good thing about science is that it's true whether or not you believe in it.</span>
+                </blockquote>
+                <p>— Neil deGrasse Tyson  <cite>( "That’s why it works" from The Colbert Report )</cite></p>
+              </div>
+              <div class='qts-bx slide'>
+                <span>&#8220</span>
+                <blockquote cite="https://www.brainyquote.com/quotes/robert_cailliau_409512">
+                  <span>When we have all data online it will be great for humanity. It is a prerequisite to solving many problems that humankind faces.</span>
+                </blockquote>
+                <p>— Robert Cailliau <cite></cite></p>
+              </div>
+              <div class='qts-bx slide'>
+                <span>&#8220</span>
+                <blockquote cite="https://www.goodreads.com/quotes/7327935-without-data-you-re-just-another-person-with-an-opinion">
+                  <span>Without data, you're just another person with an opinion.</span>
+                </blockquote>
+                <p>— W. Edwards Deming<cite></cite></p>
+              </div>
+              <div class='qts-bx slide'>
+                <span>&#8220</span>
+                <blockquote cite="https://www.sparknotes.com/philosophy/presocratics/quotes/page/5/">
+                  <span>The important thing is not to stop questioning. Curiosity has its own reason for existing.</span>
+                </blockquote>
+                <p>— Albert Einstein, <cite>( LIFE Magazine May 2, 1955 p. 64 )</cite></p>
+              </div>
+              <div class='qts-bx slide'>
+                <span>&#8220</span>
+                <blockquote cite="https://www.goodreads.com/quotes/8721430-by-convention-sweet-and-by-convention-bitter-by-convention-hot">
+                  <span>By convention sweet, by convention bitter; by convention hot, by convention cold; by convention color; but in reality: atoms and the void.</span>
+                </blockquote>
+                <p>— Democritus, <cite>( Berryman, Sylvia, "Democritus", The Stanford Encyclopedia of Philosophy )</cite></p>
+              </div>
+          </div>  
+      </div>
+      <!-- End Blog Section -->
+      
+</div>
+      <!-- Footer -->
+      <footer class="w3-text-light-grey w3-small  w3-center" style="background: linear-gradient(180deg, black , grey);" >
+        <h1 class="w3-white" style="">
+                  <span></span>
+                  <span>O</span>
+                  <span>S</span>
+                  <span>T</span>
+                  <span>E</span>
+                  <span>I</span>
+                  <span>N</span>
+                  <span>O</span>
+                  <span></span>
+              </h1>
+        <div class="w3-padding-32 " style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-evenly;">
+          <div class="w3-padding-16" style="display: flex; gap: 0.3rem; align-items: center;">
+              <img class="o4-r02" src="image/img08.png" loading="lazy" style="max-width:8rem; aspect-ratio:3/2; border: 2px solid" alt="robotic hand on a keyboard">
+              <ul class=" " style="text-align: left; margin: 0; padding: 0;">
+                <li> <a class="" href="tel:+18586090004" target="_blank"><i class="fa fa-phone w3-large"> </i> Call Now</a></li>
+                <li> <a href="mailto:brysck@workmail.com" target="_blank"><i class="fa fa-inbox w3-large"> </i> Email Me</a></li>
+              </ul>
+          </div>
+
+          <div class="w3-padding-16" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+            <span class=" "><b>ABOUT OSTEINO</b></span>
+            <ul class="" style="list-style-type: none; text-align: left;">
+              <li><a href="#main" target=""><i class="fa fa-home w3-large"> </i> Home</a></li>
+              <li><a href="#contact" target=""><i class="fa fa-envelope w3-large"> </i> Contact</a></li>
+              <li><a href=" " target=""><i class="fa fa-rss w3-large"> </i> News Blog</a></li>
+            </ul>
+          </div>
+          <div class="w3-padding-16" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class=""><b>CONNECT ON SOCIAL</b></span>
+            <ul class="" style="list-style-type: none; display: flex; align-items: center; padding: 0;">
+              <li><a href="http://www.x.com/osteinod" target="_blank"><i class="fa fa-twitter w3-large"> </i> Twitter</a></li>
+              <li><a href="http://www.github.com/osteino" target="_blank"><i class="fa fa-github w3-large"> </i> GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="w3-center">
+          <span> ©</span> 
+          Copyright osteino.com - All Rights Reserved 2024
+        </p>
+      </footer>
+      <!-- End footer -->
+      
+    
+    <!-- End Page Content -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    <script src="script/script.js"></script>
+    
+    
+
+  </body>
+</html>
